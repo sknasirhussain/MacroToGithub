@@ -16,7 +16,7 @@ Sub SaveVbaScriptToGitHub()
     base_url = "https://api.github.com/repos/"
     repo_name = "MacroToGithub/"
     username = "sknasirhussain/"
-    access_token = "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"
+    access_token = "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"
     
     'Declare variables related to the HTTP Request.
     Dim xml_obj As MSXML2.XMLHTTP60
@@ -34,7 +34,7 @@ Sub SaveVbaScriptToGitHub()
     
     For Each VBProj In VBAEditor.VBProjects
     
-        If VBProj.Name <> "Add_Ins_Sheet" Then
+        If VBProj.Name <> "pushtogithub" Then
         
             'Iterate through each VBComponent in the project
             For Each VBComp In VBProj.VBComponents
