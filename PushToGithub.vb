@@ -11,6 +11,13 @@ Sub SaveVbaScriptToGitHub()
     Dim payload As String
     Dim full_url As String
     
+    'Define our URL Components.
+    
+    base_url = "https://api.github.com/repos/"
+    repo_name = "MacroToGithub/"
+    username = "sknasirhussain/"
+    access_token = "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"
+    
     'Declare variables related to the HTTP Request.
     Dim xml_obj As MSXML2.XMLHTTP60
     
@@ -24,9 +31,6 @@ Sub SaveVbaScriptToGitHub()
     
     'Create a reference to the VB Editor, TURN OFF MACRO SECURITY!!!
     Set VBAEditor = Application.VBE
-    
-    'Grab the Visual Basic Project which will be commited
-    Set VBProj = VBAEditor.VBProjects(1)
     
     For Each VBProj In VBAEditor.VBProjects
     
@@ -52,13 +56,9 @@ Sub SaveVbaScriptToGitHub()
             
                 'Define our XML HTTP Object
                 Set xml_obj = New MSXML2.XMLHTTP60
-            
-                'Define our URL Components.
-                base_url = "https://api.github.com/repos/"
-                repo_name = "MacroToGithub/"
-                username = "sknasirhussain/"
+                
                 file_name = VBComp.Name & ".vb"
-                access_token = "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"
+                
                 'access_token = "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"
                 
                 'Build the Full Url
