@@ -16,7 +16,7 @@ Sub SaveVbaScriptToGitHub()
     base_url = "https://api.github.com/repos/"
     repo_name = "MacroToGithub/"
     username = "sknasirhussain/"
-    access_token = "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"
+    access_token = "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"
     
     'Declare variables related to the HTTP Request.
     Dim xml_obj As MSXML2.XMLHTTP60
